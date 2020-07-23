@@ -13,5 +13,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: g++ -O2 *.cc
-      run: g++ -O2 *.cc
+    - name: g++ -pthread -O2 *.cc
+      run: g++ -pthread -O2 *.cc
