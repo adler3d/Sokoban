@@ -56,6 +56,7 @@ void SetNonBlocking(int mFD, u_long iMode)
 
 // -- Linux specific --
 
+#include <unistd.h>
 #include <sys/socket.h>
 #include <netdb.h>
 
