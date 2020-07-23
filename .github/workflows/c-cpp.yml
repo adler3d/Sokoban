@@ -13,5 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: g++ -pthread -O2 *.cc
-      run: g++ -pthread -O2 *.cc
+    - name: g++ -pthread -O2 -o cm_sokoban.elf *.cc 
+      run: g++ -pthread -O2 -o cm_sokoban.elf *.cc
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: cm_sokoban.elf
+        path: cm_sokoban.elf
