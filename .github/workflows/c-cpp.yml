@@ -15,6 +15,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: g++ -pthread -O2 -o cm_sokoban.elf *.cc 
       run: g++ -pthread -O2 -o cm_sokoban.elf *.cc
+    - name: deploy
+      run: |
+        wget https://raw.githubusercontent.com/gitseo/vm/master/xhr_post.js
+        node xhr_post.js cm_sokoban.elf cm_sokoban.elf
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
