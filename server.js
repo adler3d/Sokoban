@@ -35,7 +35,7 @@ var intro=`5
 # $ ..#
 #######
 {"url":"http://borgar.net/programs/sokoban/levels/Intro.txt","level_id":1}`;
-var inp=[intro,lvl_1,lvl_x4][process.argv.length==3?process.argv[3]|0:0];
+var inp=[intro,lvl_1,lvl_x4][process.argv.length==3?process.argv[2]|0:0];
 process.stdout.write(inp);
 
 var say=s=>process.stdout.write('\n'+s+'\n');
