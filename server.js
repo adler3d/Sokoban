@@ -1,4 +1,5 @@
-const net = require('net');
+var net=require('net');
+var fs=require('fs');
 var getDateTime=t=>{
   var now     = typeof t==='number'?new Date(t):new Date();
   var year    = now.getFullYear();
