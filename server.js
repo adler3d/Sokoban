@@ -14,7 +14,7 @@ var lvl_x4=`12
 ####################
 {"url":"http://borgar.net/programs/sokoban/levels/Xsokoban.txt","level_id":4}`;
 
-var lvl_1=`10
+var lvl_1=`11
     #####
     #   #
     #$  #
