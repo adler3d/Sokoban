@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu16
+    runs-on: ubuntu-16
 
     steps:
     - uses: actions/checkout@v2
