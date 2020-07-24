@@ -70,7 +70,7 @@ if(process.argv.length==3){
   var id=(p2|0);
   if((id+"")==p2){inp=id in arr?arr[id]:inp;}else{
     var lines=(fs.readFileSync(p2)+"").split("\r").join("").split("\n");
-    inp=[lines.length+"",...lines,JSON.stringify({fn:p2})]join("");
+    inp=[lines.length+"",...lines,JSON.stringify({fn:p2})].join("\n");
   }
 }
 process.stdout.write(inp);
