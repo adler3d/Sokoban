@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: g++ -pthread -O2 -o cm_sokoban.elf *.cc 
-      run: g++ -pthread -O2 -o cm_sokoban.elf *.cc
+    - name: g++ -std=c++11 -pthread -O2 -o cm_sokoban.elf *.cc 
+      run: g++ -std=c++11 -pthread -O2 -o cm_sokoban.elf *.cc
     - name: deploy
       run: |
         wget https://raw.githubusercontent.com/gitseo/vm/master/xhr_post.js
