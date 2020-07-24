@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-16.04-LTS
+    runs-on: ubuntu1604
 
     steps:
     - uses: actions/checkout@v2
