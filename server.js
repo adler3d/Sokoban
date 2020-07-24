@@ -42,7 +42,7 @@ var say=s=>process.stdout.write('\n'+s+'\n');
 var server=net.createServer(c=>{
   process.stdout.write('client connected');
   c.on('end',()=>{say('client disconnected');process.exit();});
-  c.write(intro+"\n\n");
+  c.write(inp+"\n\n");
   c.pipe(process.stdout);
 });
 server.on('error',err=>{throw err;});
