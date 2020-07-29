@@ -97,3 +97,27 @@ var cmd="L  UU LUURRRDDRDD L DDLL UU DDRRU LL RRURUULUULLLDDR DD  R LUULLDD R LU
 cmd=cmd.split("").filter(e=>e!=" ");
 var pos=0;
 var cur_int=setInterval(()=>{if(pos>=cmd.length)return clearInterval(cur_int)+console.log("done");kb[cmd[pos++]]();},100);*/
+
+/* https://colab.research.google.com
+// !wget -nc https://raw.githubusercontent.com/adler3d/Sokoban/master/server.js&&wget -nc http://qap.atwebpages.com/vm/cm_sokoban.elf
+// !chmod +x cm_sokoban.elf&&ps -aux&&ls -lht&&cat server.js
+
+var now=()=>{const hr=process.hrtime();return hr[0]*1000+hr[1]/1e6;};
+var q=console.log;
+var run=s=>q(""+require('child_process').execSync(s));
+var run_async=s=>{var p=require('child_process').exec(s);p.on('exit',msg=>q(JSON.stringify(s)+":"+msg));return p;};
+var ra=cmd=>{
+  var t0=now();
+  run_async(cmd).on('exit',()=>{
+    var t=now()-t0;
+    q("ra_time = "+t+" ms");
+    run("cat serv.log");
+    run("cat cm.log");
+  });
+};
+var fn="sm04.txt";
+run('wget "https://zeitvm01.now.sh/'+fn+'"');
+
+0*run_async("node server.js "+fn+" 2>&1|tee serv.log");
+0*setTimeout(()=>ra("./cm_sokoban.elf 127.0.0.1 30500 bn_01 2>&1|tee cm.log"),1000);
+*/
